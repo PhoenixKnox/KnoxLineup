@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Knox · Brimstone guides by map</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section class="knox-guides" id="guides"><div class="knox-guides-inner">
+<h2 class="knox-section-label">Brimstone guides by map</h2>
+<div class="knox-guides-intro"><p>A very effective way to remember Brimstone’s lineups, or reproduce them in 2 seconds: each image is split into 3 parts — Location, Zoomed in (where to aim?) and Landing.</p><p>Hover a pin on the map to see its lineup right beside it, click to pin it, then go full screen — on mobile, just tap it. Filter by side, site or setups; every map also has its own guide video, just below.</p></div>
+<div class="knox-board" id="board">
+ <div class="knox-controls">
+  <div class="knox-plate-head"><span class="knox-label knox-label-accent" id="plate"></span><h3 class="knox-map-name" id="mapName"></h3><span class="knox-plate-count" id="plateCount"></span></div>
+  <div class="knox-field" id="mapField"><span class="knox-label" id="mapLabel">Map</span><button type="button" class="knox-mappick" id="mapBtn" aria-haspopup="listbox" aria-expanded="false"><span class="knox-mappick-text"><strong id="mapCur"></strong><small id="mapIdx"></small></span><span aria-hidden="true">▾</span></button><div class="knox-mapmenu" id="mapMenu" role="listbox"></div></div>
+  <label class="knox-field"><span class="knox-label">Search</span><span class="knox-search"><input id="q" type="search" placeholder="smoke, incendiary, wall…"></span></label>
+  <div class="knox-field" role="group" aria-label="Side"><span class="knox-label">Side</span><div class="knox-sides" id="sides"></div></div>
+  <div class="knox-field" role="group" aria-label="Site"><span class="knox-label">Site</span><div class="knox-segment" id="sites"></div></div>
+  <button type="button" class="knox-toggle" id="setups" aria-pressed="false">Setups only <span class="knox-count" id="setupCount"></span></button>
+ </div>
+ <div class="knox-stage-wrap" id="stageWrap"><div class="knox-stage" id="stage"></div></div>
+ <aside class="knox-card-panel" id="card" aria-label="Lineup preview"></aside>
+ <svg class="knox-leader" id="leader" aria-hidden="true"></svg>
+ <nav class="knox-atlas" aria-label="Choose a Valorant map"><span class="knox-label">Atlas</span><div class="knox-atlas-list" id="atlas"></div></nav>
+</div>
+<section class="knox-binder" aria-labelledby="bt"><div class="knox-binder-head"><h2 id="bt">The binder</h2><span id="binderCount"></span></div><div class="knox-binder-grid" id="binder"></div></section>
+<section class="knox-videos" id="videos"></section>
+<p class="knox-support-note">These guides stay free, and will keep being so — the <a href="#">Support page</a> explains how a single click could help.</p>
+</div></section>
+
+<div class="knox-lb" id="lb" role="dialog" aria-modal="true"><button class="knox-lb-x" id="lbX" aria-label="Close">✕</button><button class="knox-lb-nav" id="lbP" style="left:12px" aria-label="Previous image">‹</button><button class="knox-lb-nav" id="lbN" style="right:12px" aria-label="Next image">›</button>
+<div style="display:flex;align-items:flex-start"><div class="knox-lb-main" id="lbMain"><img id="lbImg" alt=""><div class="knox-lens" id="lens"></div></div><div class="knox-lb-tools"><button id="lbZ" aria-pressed="false" title="Magnifier" aria-label="Turn on the magnifier">🔍</button><button id="lbS" title="Share" aria-label="Share">⤴</button></div></div><div class="knox-lb-count" id="lbC"></div></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body></html>
